@@ -1,10 +1,27 @@
-var answer = 100
-if(answer == 100){
-    alert('獎勵一輛BMW');
-}else if(answer >= 80 && answer <= 99){
-    alert('獎勵一台inphone15s');
-}else if(answer >= 60 && answer < 80){
-    alert('獎勵一本參考書');
-}else{
-    alert('可惜，你這成績什麼都沒有');
+var num1 = prompt("請輸入第一個數字")
+var num2 = prompt("請輸入第二個數字")
+var num3 = prompt("請輸入第三個數字");
+
+if(num1 > num2 && num1 > num3){
+    console.log(num1);
+}else if(num2 > num1 && num2 > num3){
+    console.log(num2);
+}else if(num3 > num1 && num3 > num2){
+    console.log(num3)
+}
+
+if(num1 > num2 && num1 > num3 && num3 > num2){
+    console.log(num3);
+}else if(num2 > num1 && num2 > num3 && num1 > num3){
+    console.log(num1);
+}else if(num3 > num1 && num3 > num2 && num2 > num1){
+    console.log(num2);
+}
+
+if(num1 < num2 && num1 < num3){
+    console.log(num1);
+}else if(num2 < num1 && num2 < num3){
+    console.log(num2);
+}else if(num3 < num2 && num3 < num1){
+    console.log(num3);
 }
