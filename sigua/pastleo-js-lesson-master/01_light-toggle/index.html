@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>01 - light toggle</title>
+  <style>
+    html, body {
+      height: 100%;
+    }
+    body {
+      background: #353535;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    body.light {
+      background: #d4c370;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    document.body.addEventListener('click', function() {
+      document.body.classList.toggle('light')
+    })
+  </script>
+</body>
+</html>
