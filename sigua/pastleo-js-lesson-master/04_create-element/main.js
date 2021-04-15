@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 
     document.getElementById('create-element-insert-adjacent').addEventListener('click', function() {
-        const timeDiv = document.createElement('div     ')
+        const timeDiv = document.createElement('div')
         timeDiv.classList.add('time')
         timeDiv.textContent = (new Date()).toString()
 

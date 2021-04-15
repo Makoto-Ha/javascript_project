@@ -35,8 +35,13 @@ button:active {
   align-items: center;
   margin-bottom: 12px;
   padding-left: 16px;
-  background: linear-gradient(-90deg, #f5d2c5, #efeab3);
   overflow: hidden;
+  background: linear-gradient(-90deg, #f5d2c5, #efeab3);
+  height: 0;
+  transition: height 0.3s;
+}
+
+#running.run{
   height: 40px;
 }
 
