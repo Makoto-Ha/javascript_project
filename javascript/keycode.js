@@ -76,22 +76,61 @@
   
 
     
-    var string = ''
-    var count = 0
-    window.document.addEventListener('keydown', function(event) {
-      string = string + event.key
-      console.log(string)
-      console.log(count)
-      if(string[0] != 'a' && count == 0){
-        string = ''
-        count += 1
-      }else if(string[0] == 'a' && count == 1){
-        if(string[1] != 'b'){
-          string = ''
-        } 
+    // var array = []
+    // var count = 0
+    // window.document.addEventListener('keydown', function(event) {
+    //   array.push(event.key)
+    //   console.log(array)
+    //   console.log(count)
+    //   count += 1
+    //   if(array[0] != 'ArrowUp' && count == 1){
+    //     array = []
+    //     count = 0
+    //   }else if(array[1] != 'ArrowUp' && count == 2){
+    //     array = []
+    //     count = 0 
+    //   }else if(array[2] != 'ArrowDown' && count == 3){
+    //     array = []
+    //     count = 0
+    //   }else if(array[3] != 'ArrowDown' && count == 4){
+    //     array = []
+    //     count = 0
+    //   }else if(array[4] != 'ArrowLeft' && count == 5){
+    //     array = []
+    //     count = 0
+    //   }else if(array[5] != 'ArrowRight' && count == 6){
+    //     array = []
+    //     count = 0
+    //   }else if(array[6] != 'ArrowLeft' && count == 7){
+    //     array = []
+    //     count = 0
+    //   }else if(array[7] != 'ArrowRight' && count == 8){
+    //     array = []
+    //     count = 0
+    //   }else if(array[8] != 'b' && count == 9){
+    //     array = []
+    //     count = 0
+    //   }else if(array[9] != 'a' && count == 10){
+    //     array = []
+    //     count = 0
+    //   }else if(array.length == 10){
+    //     alert('上勾拳')
+    //     array = []
+    //     count = 0
+    //   }
+    // }) 
+
+    var array = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a"]
+    var i = 0
+    document.addEventListener('keydown', function(event) {
+      if(array[i].includes(event.key)) {
+        i += 1
+      }else {
+        i = 0
       }
-      if(string == 'abc'){
-        alert('答案')
-        string = ''
+
+      if(i == 10){
+        alert('恭喜答對')
+        i = 0
       }
-    }) 
+    })
