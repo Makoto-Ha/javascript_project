@@ -51,7 +51,7 @@
     //                                   if(event.keyCode == 66){
     //                                     event.target.addEventListener('keyup', function(event){
     //                                       if(event.keyCode == 65){
-    //                                         alert('爽')    
+    //                                         alert('爽')
     //                                       }
     //                                     })       
     //                                   }
@@ -73,14 +73,25 @@
     //   }
     // })
 
-    function a() {
-      if(keyCode == 38){
-        callback()
+  
+
+    
+    var string = ''
+    var count = 0
+    window.document.addEventListener('keydown', function(event) {
+      string = string + event.key
+      console.log(string)
+      console.log(count)
+      if(string[0] != 'a' && count == 0){
+        string = ''
+        count += 1
+      }else if(string[0] == 'a' && count == 1){
+        if(string[1] != 'b'){
+          string = ''
+        } 
       }
-    }
-
-    function b() {
-      console.log('a')
-    }
-
-    document.onkeydown = a()
+      if(string == 'abc'){
+        alert('答案')
+        string = ''
+      }
+    }) 
