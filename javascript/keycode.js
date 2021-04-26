@@ -120,15 +120,14 @@
     //   }
     // }) 
 
-    var array = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a"]
+    var array = ['38', '38', '40', '40', '37', '39', '37', '39', '66', '65']
     var i = 0
     document.addEventListener('keydown', function(event) {
-      if(array[i].includes(event.key)) {
+      if(array[i] == event.keyCode) {
         i += 1
       }else {
         i = 0
       }
-
       if(i == 10){
         alert('恭喜答對')
         i = 0
