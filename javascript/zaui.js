@@ -1,9 +1,11 @@
 function setCookTime(cookMethod, food, time, callback) {
+    setTimeout(function() {
+      console.log('製作完成')
+    }, 2000)
     setTimeout(()=>{
       console.log(callback(cookMethod, food))   
     }, time)
     console.log('準備中')
-    console.log('製作完成')
   }
   
   function start(callback) {
